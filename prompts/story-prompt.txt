@@ -1,0 +1,18 @@
+Write a [GENRE] story based on the following idea:
+
+[STORY IDEA]
+
+The story should be approximately [WORD COUNT] words long.
+
+Include:
+1. An engaging beginning
+2. Main characters with clear personalities
+3. A suitable setting
+4. A central conflict or problem
+5. A logical sequence of events
+6. A satisfying ending
+
+Use a [TONE] tone and make the story engaging and creative.
+
+Important elements to include:
+[KEY ELEMENTS]

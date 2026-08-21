@@ -1,0 +1,28 @@
+Create a professional resume for [NAME], who is applying for the position of [JOB/INTERNSHIP/ROLE] at [COMPANY/ORGANIZATION].
+
+Use the following information:
+
+Education:
+[EDUCATION DETAILS]
+
+Skills:
+[SKILLS]
+
+Projects:
+[PROJECTS]
+
+Work Experience:
+[WORK EXPERIENCE]
+
+Certifications:
+[CERTIFICATIONS]
+
+Achievements:
+[ACHIEVEMENTS]
+
+Other Relevant Information:
+[OTHER INFORMATION]
+
+Organize the resume into clear sections and use concise, professional language.
+
+Make the resume suitable for [JOB/INTERNSHIP/ROLE] and highlight the skills and experiences most relevant to the position.

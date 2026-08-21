@@ -1,0 +1,17 @@
+Write a blog post about [TOPIC].
+
+The blog is intended for [TARGET AUDIENCE] and should be approximately [WORD COUNT] words long.
+
+Use a [TONE] tone and include:
+
+1. An engaging title
+2. An introduction that attracts the reader's attention
+3. Well-organized sections with suitable headings
+4. Relevant information, examples, or explanations
+5. A conclusion that summarizes the main points
+6. A suitable call to action, if appropriate
+
+Key points to cover:
+[KEY POINTS]
+
+Use clear, engaging, and easy-to-understand language.

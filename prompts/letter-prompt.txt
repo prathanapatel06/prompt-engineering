@@ -1,0 +1,18 @@
+Write a [FORMAL/INFORMAL] letter to [RECIPIENT] regarding [PURPOSE/TOPIC].
+
+Include:
+1. Appropriate sender information, if required
+2. Date
+3. Recipient information, if required
+4. Suitable salutation
+5. Introduction
+6. Main message with relevant details
+7. Appropriate conclusion
+8. Suitable closing and signature
+
+Use a [TONE] tone and keep the letter approximately [WORD COUNT] words long.
+
+Important points to include:
+[KEY POINTS]
+
+Use clear, grammatically correct, and appropriate language for the type of letter.

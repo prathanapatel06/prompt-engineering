@@ -1,0 +1,14 @@
+Write a [FORMAL/INFORMAL] email to [RECIPIENT] regarding [PURPOSE/TOPIC].
+
+The email should have:
+1. A suitable subject line
+2. An appropriate greeting
+3. A clear and concise main message
+4. Any necessary details or requests
+5. A polite closing
+6. A suitable sign-off
+
+Use a [TONE] tone and keep the email approximately [WORD COUNT] words long.
+
+Important points to include:
+[KEY POINTS]

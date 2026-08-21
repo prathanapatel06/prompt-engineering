@@ -1,0 +1,13 @@
+Create an essay on [TOPIC].
+
+The essay is intended for [TARGET AUDIENCE] and should be approximately [WORD COUNT] words long.
+
+Use a [TONE] tone and structure the essay with:
+1. Introduction
+2. Main body paragraphs
+3. Conclusion
+
+Include the following key points:
+[KEY POINTS]
+
+Use clear, simple, and grammatically correct language. Maintain a logical flow between paragraphs and provide relevant examples where appropriate.

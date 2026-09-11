@@ -1,0 +1,234 @@
+```javascript
+function createEffectivePromptingQuiz() {
+  var form = FormApp.create("Components of Effective Prompting - 20 Question Quiz");
+
+  form.setDescription(
+    "A 20-question quiz about the important components of effective prompting."
+  );
+
+  form.setIsQuiz(true);
+
+  var questions = [
+    {
+      q: "What is one of the most important components of an effective prompt?",
+      options: [
+        "Clear instructions",
+        "Random words",
+        "Unrelated information",
+        "Very short commands only"
+      ],
+      answer: "Clear instructions"
+    },
+    {
+      q: "Why should a prompt clearly define the task?",
+      options: [
+        "To help the AI understand exactly what is required",
+        "To make the computer faster",
+        "To prevent the AI from responding",
+        "To remove all context"
+      ],
+      answer: "To help the AI understand exactly what is required"
+    },
+    {
+      q: "What does context provide in an effective prompt?",
+      options: [
+        "Background information relevant to the task",
+        "The computer's hardware details",
+        "The user's password",
+        "Only the final answer"
+      ],
+      answer: "Background information relevant to the task"
+    },
+    {
+      q: "Which component tells the AI what role or perspective to adopt?",
+      options: [
+        "Role",
+        "Format",
+        "Length",
+        "Keyword"
+      ],
+      answer: "Role"
+    },
+    {
+      q: "Which is an example of giving the AI a role?",
+      options: [
+        "Act as a professional teacher.",
+        "Write 200 words.",
+        "Use bullet points.",
+        "Give three examples."
+      ],
+      answer: "Act as a professional teacher."
+    },
+    {
+      q: "What is the purpose of specifying the target audience?",
+      options: [
+        "To help the AI adjust the response for the intended readers",
+        "To increase internet speed",
+        "To change the AI model",
+        "To remove instructions"
+      ],
+      answer: "To help the AI adjust the response for the intended readers"
+    },
+    {
+      q: "What do constraints do in a prompt?",
+      options: [
+        "Set rules or limitations for the response",
+        "Remove the task",
+        "Provide computer hardware",
+        "Change the user's account"
+      ],
+      answer: "Set rules or limitations for the response"
+    },
+    {
+      q: "Which is an example of a prompt constraint?",
+      options: [
+        "Keep the answer under 150 words.",
+        "Act as a teacher.",
+        "Explain photosynthesis.",
+        "Write about science."
+      ],
+      answer: "Keep the answer under 150 words."
+    },
+    {
+      q: "Why is specifying the desired output format useful?",
+      options: [
+        "It tells the AI how the response should be organized",
+        "It deletes unnecessary information automatically",
+        "It makes the AI think faster",
+        "It removes the need for a task"
+      ],
+      answer: "It tells the AI how the response should be organized"
+    },
+    {
+      q: "Which is an example of an output format?",
+      options: [
+        "A table",
+        "A password",
+        "A computer",
+        "A browser"
+      ],
+      answer: "A table"
+    },
+    {
+      q: "Why are examples useful in a prompt?",
+      options: [
+        "They demonstrate what kind of response is expected",
+        "They always make the response longer",
+        "They replace all instructions",
+        "They prevent the AI from answering"
+      ],
+      answer: "They demonstrate what kind of response is expected"
+    },
+    {
+      q: "What does specificity mean in prompting?",
+      options: [
+        "Giving precise and detailed instructions",
+        "Using as few words as possible",
+        "Avoiding all details",
+        "Using unrelated information"
+      ],
+      answer: "Giving precise and detailed instructions"
+    },
+    {
+      q: "Which prompt is more specific?",
+      options: [
+        "Write a 300-word formal essay about renewable energy for Class 10 students.",
+        "Write something about energy.",
+        "Tell me about this.",
+        "Make it good."
+      ],
+      answer: "Write a 300-word formal essay about renewable energy for Class 10 students."
+    },
+    {
+      q: "Why should unnecessary information be avoided in a prompt?",
+      options: [
+        "It can distract the AI from the main task",
+        "It always improves accuracy",
+        "It makes every response perfect",
+        "It is required for every prompt"
+      ],
+      answer: "It can distract the AI from the main task"
+    },
+    {
+      q: "What is the purpose of giving a desired tone in a prompt?",
+      options: [
+        "To guide the style of the response",
+        "To change the AI's software",
+        "To limit the response to one word",
+        "To remove context"
+      ],
+      answer: "To guide the style of the response"
+    },
+    {
+      q: "Which is an example of specifying tone?",
+      options: [
+        "Use a professional and friendly tone.",
+        "Write about marketing.",
+        "Give five examples.",
+        "Act as a teacher."
+      ],
+      answer: "Use a professional and friendly tone."
+    },
+    {
+      q: "Why is it useful to specify the desired length of a response?",
+      options: [
+        "It helps control how detailed the response should be",
+        "It guarantees the answer is correct",
+        "It removes the need for context",
+        "It changes the AI model"
+      ],
+      answer: "It helps control how detailed the response should be"
+    },
+    {
+      q: "Which prompt contains clear instructions, context, audience, and a constraint?",
+      options: [
+        "Act as a teacher. Explain photosynthesis to a Class 8 student in 150 words using simple language.",
+        "Photosynthesis.",
+        "Tell me something about plants.",
+        "Explain this."
+      ],
+      answer: "Act as a teacher. Explain photosynthesis to a Class 8 student in 150 words using simple language."
+    },
+    {
+      q: "What is the benefit of combining multiple prompt components?",
+      options: [
+        "It can make the AI's task and expected response clearer",
+        "It guarantees that every AI answer is correct",
+        "It removes the need to review the response",
+        "It makes every prompt shorter"
+      ],
+      answer: "It can make the AI's task and expected response clearer"
+    },
+    {
+      q: "Which combination contains key components of effective prompting?",
+      options: [
+        "Role, context, task, constraints, audience, and output format",
+        "Password, username, browser, and keyboard",
+        "Images, games, folders, and files",
+        "Monitor, mouse, printer, and speaker"
+      ],
+      answer: "Role, context, task, constraints, audience, and output format"
+    }
+  ];
+
+  questions.forEach(function(item) {
+    var question = form.addMultipleChoiceItem();
+
+    var choices = item.options.map(function(option) {
+      return question.createChoice(
+        option,
+        option === item.answer
+      );
+    });
+
+    question.setTitle(item.q);
+    question.setChoices(choices);
+    question.setPoints(1);
+    question.setRequired(true);
+  });
+
+  Logger.log("Quiz created successfully!");
+  Logger.log("Edit URL: " + form.getEditUrl());
+  Logger.log("Form URL: " + form.getPublishedUrl());
+}
+```

@@ -1,0 +1,27 @@
+# Travel Planner Prompt Template
+
+Act as an expert travel planner and create a detailed travel itinerary based on the following information:
+
+* **Destination:** [Enter destination]
+* **Duration:** [Enter number of days/nights]
+* **Budget:** [Enter total budget and currency]
+* **Number of Travelers:** [Enter number of travelers]
+* **Interests:** [Enter interests, e.g., beaches, history, adventure, food, shopping, nature]
+* **Transportation:** [Enter preferred transportation, e.g., flight, train, bus, car, public transport]
+* **Accommodation:** [Enter preferred accommodation type, e.g., hotel, hostel, resort, homestay]
+* **Daily Activities:** [Enter preferred activities or places you want to visit]
+
+Create a day-by-day itinerary that includes:
+
+1. Places to visit each day
+2. Suggested activities and experiences
+3. Transportation between places
+4. Suggested accommodation
+5. Estimated daily expenses
+6. Suitable meal or food suggestions
+7. A practical schedule that avoids unnecessary travel
+8. Tips for making the most of the trip while staying within the budget
+
+Present the final itinerary in a clear table with columns for **Day, Activities, Places to Visit, Transportation, Accommodation, and Estimated Cost**.
+
+If any information is missing, make reasonable assumptions and clearly mention them before creating the itinerary.

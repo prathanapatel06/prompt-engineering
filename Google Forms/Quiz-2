@@ -1,0 +1,234 @@
+
+function createPromptTypesQuiz() {
+  var form = FormApp.create("Prompt Types - 20 Question Quiz");
+
+  form.setDescription(
+    "A 20-question quiz about different types of prompts used in prompt engineering."
+  );
+
+  form.setIsQuiz(true);
+
+  var questions = [
+    {
+      q: "What is a zero-shot prompt?",
+      options: [
+        "A prompt with no examples",
+        "A prompt with exactly two examples",
+        "A prompt with only images",
+        "A prompt without any instructions"
+      ],
+      answer: "A prompt with no examples"
+    },
+    {
+      q: "What is a few-shot prompt?",
+      options: [
+        "A prompt that provides examples to guide the AI",
+        "A prompt with no instructions",
+        "A prompt containing only one word",
+        "A prompt that cannot be answered by AI"
+      ],
+      answer: "A prompt that provides examples to guide the AI"
+    },
+    {
+      q: "Which prompt type gives the AI a specific role?",
+      options: [
+        "Role-based prompt",
+        "Zero-shot prompt",
+        "Classification prompt",
+        "Transformation prompt"
+      ],
+      answer: "Role-based prompt"
+    },
+    {
+      q: "Which is an example of a role-based prompt?",
+      options: [
+        "Act as a mathematics teacher and explain algebra.",
+        "Write exactly 100 words.",
+        "Give five examples.",
+        "Summarize the paragraph."
+      ],
+      answer: "Act as a mathematics teacher and explain algebra."
+    },
+    {
+      q: "Which type of prompt is used to generate creative content?",
+      options: [
+        "Creative prompt",
+        "Classification prompt",
+        "Extraction prompt",
+        "Comparison prompt"
+      ],
+      answer: "Creative prompt"
+    },
+    {
+      q: "Which prompt type asks the AI to categorize information?",
+      options: [
+        "Classification prompt",
+        "Creative prompt",
+        "Role-based prompt",
+        "Transformation prompt"
+      ],
+      answer: "Classification prompt"
+    },
+    {
+      q: "Which prompt type changes existing content into another form?",
+      options: [
+        "Transformation prompt",
+        "Classification prompt",
+        "Zero-shot prompt",
+        "Role-based prompt"
+      ],
+      answer: "Transformation prompt"
+    },
+    {
+      q: "Which is an example of a transformation prompt?",
+      options: [
+        "Rewrite this paragraph in simple English.",
+        "Act as a teacher.",
+        "Classify these animals.",
+        "Write a story about space."
+      ],
+      answer: "Rewrite this paragraph in simple English."
+    },
+    {
+      q: "Which type of prompt asks the AI to find specific information from a given text?",
+      options: [
+        "Extraction prompt",
+        "Creative prompt",
+        "Role prompt",
+        "Classification prompt"
+      ],
+      answer: "Extraction prompt"
+    },
+    {
+      q: "Which is an example of an extraction prompt?",
+      options: [
+        "Extract all email addresses from this text.",
+        "Write a poem about nature.",
+        "Act as a lawyer.",
+        "Rewrite this paragraph."
+      ],
+      answer: "Extract all email addresses from this text."
+    },
+    {
+      q: "Which prompt type is useful for finding similarities and differences?",
+      options: [
+        "Comparison prompt",
+        "Creative prompt",
+        "Extraction prompt",
+        "Zero-shot prompt"
+      ],
+      answer: "Comparison prompt"
+    },
+    {
+      q: "Which is an example of a comparison prompt?",
+      options: [
+        "Compare solar energy and wind energy.",
+        "Write a story about solar energy.",
+        "Extract the names from this text.",
+        "Act as an environmental scientist."
+      ],
+      answer: "Compare solar energy and wind energy."
+    },
+    {
+      q: "What is the main purpose of an instruction prompt?",
+      options: [
+        "To give the AI a clear task to perform",
+        "To provide computer hardware information",
+        "To remove all instructions",
+        "To prevent the AI from responding"
+      ],
+      answer: "To give the AI a clear task to perform"
+    },
+    {
+      q: "Which prompt type is commonly used to summarize information?",
+      options: [
+        "Summarization prompt",
+        "Classification prompt",
+        "Role prompt",
+        "Comparison prompt"
+      ],
+      answer: "Summarization prompt"
+    },
+    {
+      q: "Which is an example of a summarization prompt?",
+      options: [
+        "Summarize this article in 100 words.",
+        "Classify these sentences.",
+        "Act as a teacher.",
+        "Write a fictional story."
+      ],
+      answer: "Summarize this article in 100 words."
+    },
+    {
+      q: "Which prompt type asks the AI to translate content from one language to another?",
+      options: [
+        "Translation prompt",
+        "Classification prompt",
+        "Extraction prompt",
+        "Comparison prompt"
+      ],
+      answer: "Translation prompt"
+    },
+    {
+      q: "Which is an example of a translation prompt?",
+      options: [
+        "Translate this paragraph from English to Hindi.",
+        "Summarize this paragraph.",
+        "Classify these words.",
+        "Write a story in English."
+      ],
+      answer: "Translate this paragraph from English to Hindi."
+    },
+    {
+      q: "Which type of prompt is designed to produce imaginative content such as stories or poems?",
+      options: [
+        "Creative prompt",
+        "Extraction prompt",
+        "Classification prompt",
+        "Summarization prompt"
+      ],
+      answer: "Creative prompt"
+    },
+    {
+      q: "Which prompt type can be used to ask the AI to identify the sentiment of a sentence?",
+      options: [
+        "Classification prompt",
+        "Translation prompt",
+        "Creative prompt",
+        "Transformation prompt"
+      ],
+      answer: "Classification prompt"
+    },
+    {
+      q: "Which statement best describes prompt types?",
+      options: [
+        "Different prompt types are designed for different kinds of tasks.",
+        "All prompts must have exactly the same structure.",
+        "Prompt types are only used for programming.",
+        "Prompt types cannot be combined."
+      ],
+      answer: "Different prompt types are designed for different kinds of tasks."
+    }
+  ];
+
+  questions.forEach(function(item) {
+    var question = form.addMultipleChoiceItem();
+
+    var choices = item.options.map(function(option) {
+      return question.createChoice(
+        option,
+        option === item.answer
+      );
+    });
+
+    question.setTitle(item.q);
+    question.setChoices(choices);
+    question.setPoints(1);
+    question.setRequired(true);
+  });
+
+  Logger.log("Quiz created successfully!");
+  Logger.log("Edit URL: " + form.getEditUrl());
+  Logger.log("Form URL: " + form.getPublishedUrl());
+}
+

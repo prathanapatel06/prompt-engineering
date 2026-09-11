@@ -1,0 +1,33 @@
+# Mathematics Prompt Template
+
+Solve the following mathematics problem using **[topic/concept]**.
+
+### Problem:
+
+[Enter the mathematics question or problem here]
+
+### Details:
+
+* **Topic:** [Algebra / Geometry / Calculus / Statistics / Trigonometry / etc.]
+* **Class/Level:** [Enter class or difficulty level]
+* **Given Information:** [Enter the known values or conditions]
+* **Required Answer:** [What needs to be found]
+
+### Instructions:
+
+1. Solve the problem step by step.
+2. Clearly explain the formula or mathematical concept used.
+3. Show all important calculations.
+4. Explain why each step is performed.
+5. Keep the explanation simple and easy to understand.
+6. Verify the final answer whenever possible.
+7. Clearly highlight the final answer.
+8. Do not skip important steps.
+
+### Expected Output:
+
+* **Concept/Formula Used**
+* **Step-by-Step Solution**
+* **Calculations**
+* **Final Answer**
+* **Answer Verification**

@@ -1,0 +1,32 @@
+# Architecture Prompt Template
+
+Act as a professional architect and help me develop an architectural concept based on the following requirements:
+
+* **Project Type:** [Residential / Commercial / School / Office / Other]
+* **Location:** [Enter location]
+* **Site Size:** [Enter site dimensions or area]
+* **Purpose:** [Describe the purpose of the building]
+* **Number of Floors:** [Enter number of floors]
+* **Budget:** [Enter estimated budget]
+* **Architectural Style:** [Modern / Minimalist / Traditional / Sustainable / Other]
+* **Number of Users:** [Enter expected number of users]
+* **Required Spaces:** [List rooms or areas required]
+* **Materials:** [Preferred construction materials]
+* **Climate:** [Enter climate or weather conditions]
+* **Sustainability Requirements:** [Solar panels / Natural ventilation / Rainwater harvesting / Other]
+* **Special Requirements:** [Enter any additional requirements]
+
+Based on these details, create an architectural concept that includes:
+
+1. Overall design concept
+2. Suggested floor-plan arrangement
+3. Space allocation and approximate dimensions
+4. Building orientation
+5. Natural lighting and ventilation
+6. Recommended materials
+7. Sustainable design features
+8. Exterior and interior design ideas
+9. Functional movement and circulation
+10. Estimated space requirements
+
+Present the final answer in a clear and organized format. Explain the reasoning behind the major design choices and make reasonable assumptions where information is missing.

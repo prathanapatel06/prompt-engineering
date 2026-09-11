@@ -1,0 +1,30 @@
+# Code Generation Prompt Template
+
+Create a [program/application/project] using **[programming language]**.
+
+### Requirements:
+
+* **Programming Language:** [Python / Java / C / C++ / JavaScript / etc.]
+* **Project/Program Name:** [Enter name]
+* **Purpose:** [Describe what the program should do]
+* **Main Features:** [List the required features]
+* **Input:** [Describe the input required from the user]
+* **Output:** [Describe the expected output]
+* **User Interface:** [Command line / GUI / Web interface]
+* **Difficulty Level:** [Beginner / Intermediate / Advanced]
+* **Additional Requirements:** [Any specific rules or conditions]
+
+### Instructions:
+
+1. Generate complete and working code.
+2. Use clear and simple coding practices.
+3. Add comments to explain important parts of the code.
+4. Explain how the code works step by step.
+5. Mention any libraries or dependencies required.
+6. Provide instructions for running the program.
+7. Include an example input and expected output.
+8. Make sure the code handles common errors properly.
+9. Do not include unnecessary code or features that were not requested.
+
+**Expected Output:**
+Provide the complete code first, followed by an explanation, setup instructions, and an example of how to run the program.

@@ -1,0 +1,229 @@
+function createPromptStructureQuiz() {
+  var form = FormApp.create("Structure of a Prompt - 20 Questions");
+
+  form.setDescription(
+    "A 20-question quiz on the structure and important components of an effective prompt."
+  );
+
+  form.setIsQuiz(true);
+
+  var questions = [
+    {
+      q: "What is a prompt?",
+      options: [
+        "A command or instruction given to an AI",
+        "A computer virus",
+        "A type of hardware",
+        "A programming language"
+      ],
+      answer: "A command or instruction given to an AI"
+    },
+    {
+      q: "Which part of a prompt explains what the AI should do?",
+      options: [
+        "Task",
+        "Background",
+        "Format",
+        "Example"
+      ],
+      answer: "Task"
+    },
+    {
+      q: "What does context provide in a prompt?",
+      options: [
+        "Relevant background information",
+        "Only the final answer",
+        "A password",
+        "Computer hardware details"
+      ],
+      answer: "Relevant background information"
+    },
+    {
+      q: "Why is it important to clearly define the task in a prompt?",
+      options: [
+        "It tells the AI exactly what is required",
+        "It makes the computer faster",
+        "It deletes the conversation",
+        "It changes the internet connection"
+      ],
+      answer: "It tells the AI exactly what is required"
+    },
+    {
+      q: "Which component tells the AI who it should act as?",
+      options: [
+        "Role",
+        "Format",
+        "Length",
+        "Example"
+      ],
+      answer: "Role"
+    },
+    {
+      q: "Which of the following is an example of assigning a role?",
+      options: [
+        "Act as a professional teacher",
+        "Write 500 words",
+        "Use bullet points",
+        "Give three examples"
+      ],
+      answer: "Act as a professional teacher"
+    },
+    {
+      q: "What does the output format specify?",
+      options: [
+        "How the answer should be presented",
+        "Who is using the AI",
+        "The AI's password",
+        "The internet speed"
+      ],
+      answer: "How the answer should be presented"
+    },
+    {
+      q: "Which is an example of an output format?",
+      options: [
+        "A table",
+        "A keyboard",
+        "A browser",
+        "A password"
+      ],
+      answer: "A table"
+    },
+    {
+      q: "What are constraints in a prompt?",
+      options: [
+        "Rules or limitations that the AI should follow",
+        "Errors in a computer",
+        "Types of software",
+        "Internet settings"
+      ],
+      answer: "Rules or limitations that the AI should follow"
+    },
+    {
+      q: "Which is an example of a constraint?",
+      options: [
+        "Keep the answer under 200 words",
+        "Use a computer",
+        "Open a browser",
+        "Turn off the monitor"
+      ],
+      answer: "Keep the answer under 200 words"
+    },
+    {
+      q: "Why are examples useful in a prompt?",
+      options: [
+        "They show the AI the desired type or style of response",
+        "They increase internet speed",
+        "They delete unwanted files",
+        "They replace the task"
+      ],
+      answer: "They show the AI the desired type or style of response"
+    },
+    {
+      q: "What is meant by being specific in a prompt?",
+      options: [
+        "Giving clear and precise instructions",
+        "Using only one word",
+        "Avoiding all details",
+        "Using random information"
+      ],
+      answer: "Giving clear and precise instructions"
+    },
+    {
+      q: "Which prompt is more specific?",
+      options: [
+        "Write a 300-word formal essay about climate change",
+        "Write something",
+        "Tell me something",
+        "Make it good"
+      ],
+      answer: "Write a 300-word formal essay about climate change"
+    },
+    {
+      q: "What is the purpose of specifying the target audience?",
+      options: [
+        "To help the AI adjust the response to the intended readers",
+        "To change the computer screen",
+        "To increase storage",
+        "To create a password"
+      ],
+      answer: "To help the AI adjust the response to the intended readers"
+    },
+    {
+      q: "Which component can specify the desired length of a response?",
+      options: [
+        "Constraints",
+        "Role",
+        "Context",
+        "Topic"
+      ],
+      answer: "Constraints"
+    },
+    {
+      q: "Which of the following is a well-structured prompt?",
+      options: [
+        "Act as a teacher. Explain photosynthesis to a Class 10 student in 200 words using simple language.",
+        "Photosynthesis.",
+        "Explain.",
+        "Tell me everything."
+      ],
+      answer: "Act as a teacher. Explain photosynthesis to a Class 10 student in 200 words using simple language."
+    },
+    {
+      q: "What happens when a prompt is vague?",
+      options: [
+        "The AI may produce an unclear or less relevant response",
+        "The AI always gives a perfect answer",
+        "The computer shuts down",
+        "The internet becomes faster"
+      ],
+      answer: "The AI may produce an unclear or less relevant response"
+    },
+    {
+      q: "Which element gives the AI background information needed to complete a task?",
+      options: [
+        "Context",
+        "Font",
+        "Password",
+        "Browser"
+      ],
+      answer: "Context"
+    },
+    {
+      q: "What is the main benefit of a well-structured prompt?",
+      options: [
+        "It increases the chance of getting a relevant and useful response",
+        "It guarantees the AI is always correct",
+        "It makes the computer faster",
+        "It removes the need for instructions"
+      ],
+      answer: "It increases the chance of getting a relevant and useful response"
+    },
+    {
+      q: "Which combination contains important components of a well-structured prompt?",
+      options: [
+        "Role, context, task, constraints, and output format",
+        "Keyboard, mouse, monitor, and printer",
+        "Password, username, browser, and Wi-Fi",
+        "Files, folders, icons, and desktop"
+      ],
+      answer: "Role, context, task, constraints, and output format"
+    }
+  ];
+
+  questions.forEach(function(item) {
+    var question = form.addMultipleChoiceItem();
+
+    var choices = item.options.map(function(option) {
+      return question.createChoice(option, option === item.answer);
+    });
+
+    question.setTitle(item.q);
+    question.setChoices(choices);
+    question.setPoints(1);
+    question.setRequired(true);
+  });
+
+  Logger.log("Form created successfully!");
+  Logger.log("Edit URL: " + form.getEditUrl());
+  Logger.log("Form URL: " + form.getPublishedUrl());
+}

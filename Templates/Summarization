@@ -1,0 +1,33 @@
+# Summarization Prompt Template
+
+Summarize the following **[text/article/chapter/document]** in a clear and concise way.
+
+### Content:
+
+[Paste the text or provide the content to be summarized]
+
+### Details:
+
+* **Topic:** [Enter topic]
+* **Purpose:** [Study / Revision / Quick Understanding / Presentation / etc.]
+* **Target Audience:** [School Student / College Student / General Reader / etc.]
+* **Preferred Length:** [Short / Medium / Detailed]
+* **Format:** [Paragraph / Bullet Points / Key Points]
+
+### Instructions:
+
+1. Identify the main ideas and important information.
+2. Remove unnecessary repetition and irrelevant details.
+3. Keep the original meaning and context.
+4. Use simple and easy-to-understand language.
+5. Do not add information that is not present in the original content.
+6. Include important facts, terms, dates, or examples when relevant.
+7. Organize the summary logically.
+8. Clearly highlight the most important points.
+
+### Expected Output:
+
+* **Brief Overview**
+* **Key Points**
+* **Important Details**
+* **Final Summary**

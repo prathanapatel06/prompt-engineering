@@ -1,4 +1,4 @@
-```javascript
+
 function createEffectivePromptingQuiz() {
   var form = FormApp.create("Components of Effective Prompting - 20 Question Quiz");
 
@@ -231,4 +231,4 @@ function createEffectivePromptingQuiz() {
   Logger.log("Edit URL: " + form.getEditUrl());
   Logger.log("Form URL: " + form.getPublishedUrl());
 }
-```
+

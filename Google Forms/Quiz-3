@@ -1,4 +1,3 @@
-
 function createEffectivePromptingQuiz() {
   var form = FormApp.create("Components of Effective Prompting - 20 Question Quiz");
 

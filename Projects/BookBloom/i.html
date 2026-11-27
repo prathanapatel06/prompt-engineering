@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BookBloom — discover your next favourite book.">
+  <meta name="theme-color" content="#f7e9f1">
+  <title>BookBloom | A little magic on every page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="i.css">
+  <script src="s.js" defer></script>
+</head>
+
+<body>
+
+  <div class="announcement">
+    A little something for your next chapter — free delivery on orders over ₹799
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <span class="brand-mark">✿</span>
+      <span>Book<span class="brand-accent">Bloom</span></span>
+    </a>
+
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#catalog">Books</a>
+      <a href="#about">Our story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="header-search">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search books..." aria-label="Search books">
+      </label>
+
+      <button class="icon-button" id="themeButton" aria-label="Toggle dark theme">☾</button>
+      <button class="icon-button action-count" id="wishlistButton" aria-label="Open wishlist">
+        ♡<span id="wishlistCount">0</span>
+      </button>
+      <button class="icon-button action-count" id="cartButton" aria-label="Open shopping cart">
+        🛍<span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+
+        <h1>Find a book.<br><em>Find your world.</em></h1>
+
+        <p class="hero-text">
+          Thoughtfully picked stories, timeless favourites and fresh discoveries —
+          all in one happy place.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalog">Explore books →</a>
+          <a class="text-link" href="#categories">Browse categories</a>
+        </div>
+
+        <div class="hero-note">
+          <span>★★★★★</span> Little stories. Big feelings. Endless possibilities.
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+
+        <div class="hero-book book-back">
+          <span>THE ART OF<br>DAYDREAMING</span>
+        </div>
+
+        <div class="hero-book book-front">
+          <small>A BOOKBLOOM PICK</small>
+          <strong>Somewhere<br>Between<br>the Pages</strong>
+          <span>✿</span>
+        </div>
+
+        <div class="floating-note note-one">Read more<br>♡ worry less</div>
+        <div class="floating-note note-two">Your next<br>favourite?</div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div>✿ Carefully curated reads</div>
+      <div>♡ Made for every mood</div>
+      <div>✧ A lovely gifting idea</div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section-wrap section" id="categories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">FIND YOUR MOOD</p>
+          <h2>Browse by <em>category</em></h2>
+        </div>
+        <p>From page-turners to peaceful reads, there's a shelf for everyone.</p>
+      </div>
+
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card cat-fiction" data-category="Fiction">
+          <span>01</span><strong>Fiction</strong><small>Stories to get lost in</small>
+        </button>
+
+        <button class="category-card cat-romance" data-category="Romance">
+          <span>02</span><strong>Romance</strong><small>Love in every chapter</small>
+        </button>
+
+        <button class="category-card cat-mystery" data-category="Mystery">
+          <span>03</span><strong>Mystery</strong><small>Follow every clue</small>
+        </button>
+
+        <button class="category-card cat-fantasy" data-category="Fantasy">
+          <span>04</span><strong>Fantasy</strong><small>Worlds beyond imagination</small>
+        </button>
+
+        <button class="category-card cat-selfhelp" data-category="Self-help">
+          <span>05</span><strong>Self-help</strong><small>Little steps, big growth</small>
+        </button>
+
+        <button class="category-card cat-academic" data-category="Academic">
+          <span>06</span><strong>Academic</strong><small>Learn something new</small>
+        </button>
+      </div>
+    </section>
+
+    <!-- BOOK CATALOGUE -->
+    <section class="catalog-section section" id="catalog">
+      <div class="section-wrap">
+
+        <div class="section-heading catalog-heading">
+          <div>
+            <p class="eyebrow">THE BOOKBLOOM SHELF</p>
+            <h2 id="catalogTitle">Books to <em>fall for</em></h2>
+            <p class="catalog-subtitle" id="catalogSubtitle">
+              A few lovely places to begin your next reading adventure.
+            </p>
+          </div>
+
+          <button class="button button-soft hidden" id="clearCategory">
+            ← All books
+          </button>
+        </div>
+
+        <div class="catalog-tools">
+          <div class="filter-pills">
+            <button class="filter-pill active" data-filter="All">All books</button>
+            <button class="filter-pill" data-filter="Bestseller">Bestsellers</button>
+            <button class="filter-pill" data-filter="New">New arrivals</button>
+            <button class="filter-pill" data-filter="Under500">Under ₹500</button>
+          </div>
+
+          <label class="sort-label">
+            Sort by
+            <select id="sortSelect">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+              <option value="rating">Top rated</option>
+              <option value="title">Title A–Z</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="results-line" id="resultsLine" aria-live="polite"></p>
+
+        <div class="book-grid" id="bookGrid"></div>
+
+        <div class="empty-state hidden" id="emptyState">
+          <span>✿</span>
+          <h3>No books found just yet</h3>
+          <p>Try another search or clear your filters.</p>
+          <button class="button button-primary" id="resetCatalog">Show all books</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROMOTIONAL BANNER -->
+    <section class="feature-banner section-wrap">
+      <div>
+        <p class="eyebrow">A SMALL TREAT</p>
+        <h2>Make room for<br><em>one more story.</em></h2>
+        <p>Build your own little reading ritual with a book that feels just right.</p>
+        <a class="button button-light" href="#catalog">Find your next read →</a>
+      </div>
+      <div class="banner-flower">✿</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section-wrap section about-section" id="about">
+      <div class="about-art">
+        <div class="about-circle">READ<br>GROW<br>REPEAT</div>
+        <span class="about-spark">✧</span>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow">A NOTE FROM OUR SHELF</p>
+        <h2>Books make the<br>ordinary <em>magical.</em></h2>
+
+        <p>
+          BookBloom is a student-built bookstore concept made for curious minds
+          and kind-hearted readers. We believe a good book can spark an idea,
+          offer a little comfort, or take you somewhere completely new.
+        </p>
+
+        <p>
+          This demo shop lets you explore a curated catalogue, save favourites
+          and build a basket — all in a soft, welcoming space.
+        </p>
+
+        <a class="text-link" href="#contact">Say hello →</a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-section">
+      <div class="section-wrap newsletter-inner">
+        <div>
+          <p class="eyebrow">LETTERS FROM THE BOOKSHELF</p>
+          <h2>A little bookish joy<br><em>in your inbox.</em></h2>
+          <p>Get reading inspiration and occasional updates.</p>
+        </div>
+
+        <form id="newsletterForm" class="newsletter-form">
+          <label for="newsletterEmail" class="visually-hidden">Email address</label>
+          <input id="newsletterEmail" type="email" placeholder="Your email address" required>
+          <button class="button button-primary" type="submit">Sign me up</button>
+          <small>Demo form — no email will be sent.</small>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section-wrap section contact-section" id="contact">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WE'D LOVE TO HEAR FROM YOU</p>
+          <h2>Drop us a <em>note.</em></h2>
+        </div>
+        <p>Questions, suggestions or a book recommendation? Send a message.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <label>
+          Your name
+          <input name="name" type="text" minlength="2" maxlength="60" required placeholder="Your name">
+        </label>
+
+        <label>
+          Email address
+          <input name="email" type="email" required placeholder="you@example.com">
+        </label>
+
+        <label class="full-field">
+          Your message
+          <textarea name="message" rows="4" minlength="10" maxlength="1000" required placeholder="Write your message..."></textarea>
+        </label>
+
+        <button class="button button-primary" type="submit">Send message →</button>
+        <p class="form-note">Demo form — messages are not sent to a server.</p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="section-wrap footer-inner">
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-mark">✿</span>
+        <span>Book<span class="brand-accent">Bloom</span></span>
+      </a>
+
+      <p>A little magic on every page.</p>
+
+      <div class="footer-links">
+        <a href="#categories">Categories</a>
+        <a href="#about">Our story</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <small>© <span id="year"></span> BookBloom. Student project demo.</small>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <p class="eyebrow">YOUR LITTLE BASKET</p>
+        <h2>Your cart <span id="cartHeadingCount">(0)</span></h2>
+      </div>
+      <button class="close-button" data-close-drawer aria-label="Close cart">×</button>
+    </div>
+
+    <div class="drawer-content" id="cartItems"></div>
+
+    <div class="drawer-footer">
+      <div class="subtotal-row">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₹0</strong>
+      </div>
+
+      <p class="shipping-note" id="shippingNote">Free delivery on orders over ₹799.</p>
+
+      <button class="button button-primary button-wide" id="checkoutButton">
+        Continue to checkout
+      </button>
+
+      <button class="text-link continue-shopping" data-close-drawer>
+        Continue browsing
+      </button>
+    </div>
+  </aside>
+
+  <!-- WISHLIST DRAWER -->
+  <aside class="drawer" id="wishlistDrawer" aria-label="Wishlist" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <p class="eyebrow">SAVED FOR LATER</p>
+        <h2>Your wishlist <span id="wishlistHeadingCount">(0)</span></h2>
+      </div>
+      <button class="close-button" data-close-drawer aria-label="Close wishlist">×</button>
+    </div>
+
+    <div class="drawer-content" id="wishlistItems"></div>
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-backdrop hidden" id="checkoutModal">
+    <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button class="close-button modal-close" id="closeCheckout" aria-label="Close checkout">×</button>
+
+      <p class="eyebrow">ALMOST YOURS</p>
+      <h2 id="checkoutTitle">Checkout preview</h2>
+
+      <p class="modal-intro">
+        This is a front-end project demo. No payment will be collected and no order will be placed.
+      </p>
+
+      <form id="checkoutForm" class="checkout-form">
+        <label>
+          Full name
+          <input name="name" required minlength="2" placeholder="Your full name">
+        </label>
+
+        <label>
+          Email
+          <input name="email" type="email" required placeholder="you@example.com">
+        </label>
+
+        <label>
+          Delivery address
+          <textarea name="address" required minlength="8" rows="3" placeholder="Your delivery address"></textarea>
+        </label>
+
+        <div class="checkout-total">
+          <span>Demo order total</span>
+          <strong id="checkoutTotal">₹0</strong>
+        </div>
+
+        <button class="button button-primary button-wide" type="submit">
+          Place demo order
+        </button>
+      </form>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+</body>
+</html>
